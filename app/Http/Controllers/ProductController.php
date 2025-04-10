@@ -12,8 +12,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = Product::all();
-        return view('product.index', compact('product'));
+        $products = Product::all();
+
+        return response()->json($products, 200);
     }
 
     private function validateRequest(Request $request) {
@@ -40,10 +41,12 @@ class ProductController extends Controller
     {
         $this->validateRequest($request);
 
-        Product::create($request->all());
+        $product = Product::create($request->all());
 
-        return redirect()->route('product.index')
-            ->with('success','Product created successfully.');
+        return response()->json([
+            'query' => 'Successfully created product with ID '.$product->id.'.',
+            'product' => $product
+            ], 200);
     }
 
     /**
@@ -52,7 +55,11 @@ class ProductController extends Controller
     public function show(string $id)
     {
         $product = Product::find($id);
-        return view('product.show', compact('product'));
+
+        return response()->json([
+                'query' => 'Successfully found product with ID '.$product->id.'.',
+                'product' => $product
+            ], 200);
     }
 
     /**
@@ -64,8 +71,11 @@ class ProductController extends Controller
 
         $product = Product::find($id);
         $product->update($request->all());
-        return redirect()->route('product.index')
-            ->with('success', 'Product updated successfully.');
+
+        return response()->json([
+                'query' => 'Successfully updated product with ID '.$product->id.'.',
+                'product' => $product
+            ], 200);
     }
 
     /**
@@ -75,7 +85,9 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        return redirect()->route('product.index')
-            ->with('success', 'Product deleted successfully');
+
+        return response()->json([
+                'query' => 'Successfully deleted product with ID '.$product->id.'.'
+            ], 200);
     }
 }
