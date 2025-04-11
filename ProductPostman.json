@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "8ef40933-3323-4ac9-87e4-b1823830eeea",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30215434",
+		"_collection_link": "https://nmc-soft-task.postman.co/workspace/NMC-Soft-Task~eb47952e-db97-47b9-b4ac-ce0f446036d6/collection/30215434-8ef40933-3323-4ac9-87e4-b1823830eeea?action=share&source=collection_link&creator=30215434"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bleachingCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "defaultLanguage",
+							"value": "fr_FR",
+							"type": "text"
+						},
+						{
+							"key": "dryCleaningCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "dryingCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "fasteningTypeCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "ironingCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "productID",
+							"value": "0012529",
+							"type": "text"
+						},
+						{
+							"key": "pulloutTypeCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "sapPacket",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "updateImages",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "waistlineCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "washabilityCode",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bleachingCode",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "defaultLanguage",
+							"value": "de_DE",
+							"type": "text"
+						},
+						{
+							"key": "dryCleaningCode",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "dryingCode",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "fasteningTypeCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "ironingCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "productID",
+							"value": "0012533",
+							"type": "text"
+						},
+						{
+							"key": "pulloutTypeCode",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "sapPacket",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "updateImages",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "waistlineCode",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "washabilityCode",
+							"value": "15",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/product/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
